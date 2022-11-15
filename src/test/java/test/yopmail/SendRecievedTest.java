@@ -39,15 +39,12 @@ public class SendRecievedTest extends TestBaseYopmail{
        mainPage.loginEmail.click();
        mainPage.loginEmail.cleanSetText(userLogin2);
        mainPage.signUpEmailButton.click();
-       inBox.compose.click();
 
-//       Session.getInstance().getBrowser().switchTo().frame(iframePass);
-       Session.getInstance().getBrowser().switchTo().frame(iframeLeft);
+       Session.getInstance().getBrowser().switchTo().frame("ifinbox");
 
-      // inBox.subjectReceived.click();
        String emailReceived= inBox.subjectReceived.getText();
        System.out.println(emailReceived);
-       //Assertions.assertEquals(emailReceived,subjectEmail,"ERROR!,does not arrived the email");
+       Assertions.assertEquals(emailReceived,subjectEmail,"ERROR!,does not arrived the email");
 
     }
 }
