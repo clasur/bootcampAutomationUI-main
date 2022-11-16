@@ -12,15 +12,22 @@ public class CrudProjectTest extends TestBaseTodoist{
     @Test
 
     public void verifityTestProject(){
+
         String projCreated = "NEwMOJIX";
         String projUpdated = "UPDATEMOJIX";
 
+        String taskCreated = "TEST";
+        String descriptionTask="DECRIPTION"
+        String taskUpdated = "TESTUPDATE";
+
+        //LOGIN
         mainPage.startLogin.click();
         loginPage.userLogin.setText(user);
         loginPage.pwdLogin.setText(password);
         loginPage.introLogin.click();
         //Assertion.assert.true();
 
+  // CRUD PROJECT
         //Create Project
         mainHome.newProject.click();
         projectCreateSection.newNameProject.setText(projCreated);
@@ -43,6 +50,25 @@ public class CrudProjectTest extends TestBaseTodoist{
         menuProject.moreActionProject.click();
         menuProject.deleteProject.click();
         projectDeleteSection.deleteProject.click();
+        //Assertion.assertTrue();
+
+    //CRUD TASK
+        //CreateProject
+        mainHome.newTask.click();
+        taskSectionCreate.nameTask.setText(taskCreated);
+        taskSectionCreate.descriptionTask.setText(descriptionTask);
+        taskSectionCreate.dateTask.click();
+        taskSectionCreate.todayTask.click();
+        taskSectionCreate.selectProject.click();
+        taskSectionCreate.projectSelected.click();
+        taskSectionCreate.addTask.click();
+        //Assertions.assertTrue();
+
+        //Update Project
+        //Assertion.assertTrue();
+
+        //Delete Project
+
         //Assertion.assertTrue();
 
     }
