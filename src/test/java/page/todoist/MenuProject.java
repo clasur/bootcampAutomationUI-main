@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 public class MenuProject {
 
-    public Button moreActionProject = new Button(By.xpath("//button[@aria-label='Más acciones de proyecto' and @aria-labelledby='id-tzt4cm']"));
+    public Button moreActionProject = new Button(By.xpath("//button[contains(text(),'de opciones del proyecto')]"));
     public CheckBox editProject = new CheckBox(By.xpath("//div[text()='Editar proyecto']"));
     public CheckBox deleteProject = new CheckBox(By.xpath("//div[contains(text(),'Eliminar proyecto')]"));
 

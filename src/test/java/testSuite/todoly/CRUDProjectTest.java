@@ -40,6 +40,4 @@ public class CRUDProjectTest extends TestBase{
         Assertions.assertFalse(projectSection.isProjectDisplayedInList(projectUpdated),"ERROR! the project was not deleted");
 
     }
-
-
 }
